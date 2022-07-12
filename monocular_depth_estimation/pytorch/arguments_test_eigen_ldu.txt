@@ -1,0 +1,14 @@
+--encoder densenet161_bts
+--data_path_eval ../../Datasets/KITTI_depth/ (your_path)
+--gt_path_eval ../../Datasets/KITTI_depth/data_depth_annotated/ (your_path)
+--dataset kitti
+--filenames_file_eval ../train_test_inputs/eigen_test_files_with_gt.txt
+--model_name bts_kitti_pytorch
+--checkpoint_path your_path
+--input_height 352
+--input_width 1216
+--max_depth 80
+--do_kb_crop
+--garg_crop
+--clip_gt
+--nb_proto 5
