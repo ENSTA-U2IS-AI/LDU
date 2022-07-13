@@ -222,15 +222,14 @@ def test():
             depth_est = torch.tensor(depth_est).cuda()
             depth_gt = torch.tensor(depth_gt).cuda()
             valid_mask = torch.tensor(valid_mask).cuda()
-            depth_abs_error = abs(depth_est - depth_gt)
 
-            hist_pred_rmse, hist_oracle_rmse, nb_remain_rmse, ausc_rmse[i] = sparsification_error_gpu(unc_npy = uncertainty[valid_mask], err_npy = depth_abs_error[valid_mask], gt_npy = depth_gt[valid_mask], is_rmse = True)
+            hist_pred_rmse, hist_oracle_rmse, nb_remain_rmse, ausc_rmse[i] = sparsification_error_gpu(unc_tensor = uncertainty[valid_mask], pred_tensor = depth_est[valid_mask], gt_tensor = depth_gt[valid_mask], is_rmse = True)
             hist_pred_rmses += hist_pred_rmse
             hist_oracle_rmses += hist_oracle_rmse
             nb_remain_rmses += nb_remain_rmse
             spar_rmse += np.trapz((hist_pred_rmse - hist_oracle_rmse), x = list(np.arange(start=0.0, stop=1.0, step=(1/100))))
 
-            hist_pred_absrel, hist_oracle_absrel, nb_remain_absrel, ausc_absrel[i] = sparsification_error_gpu(unc_npy = uncertainty[valid_mask], err_npy = depth_abs_error[valid_mask], gt_npy = depth_gt[valid_mask], is_rmse = False)
+            hist_pred_absrel, hist_oracle_absrel, nb_remain_absrel, ausc_absrel[i] = sparsification_error_gpu(unc_tensor = uncertainty[valid_mask], pred_tensor = depth_est[valid_mask], gt_tensor = depth_gt[valid_mask], is_rmse = False)
             hist_pred_absrels += hist_pred_absrel
             hist_oracle_absrels += hist_oracle_absrel
             nb_remain_absrels += nb_remain_absrel
