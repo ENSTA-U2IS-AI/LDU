@@ -11,7 +11,7 @@ learnable prototypes. The DNN backbone computes a feature vector z for an input 
 
 ![image](https://github.com/ENSTA-U2IS/LDU/blob/main/process.png)
 
-For more details, please refer to our paper.
+For more details, please refer to our [paper]((https://arxiv.org/abs/2207.10130)).
 
 ## Note
 We currently only provide the codes for toy example, classification and monocular depth estimation.\

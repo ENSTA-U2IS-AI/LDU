@@ -1,10 +1,9 @@
 # LDU on BTS
 Latent Discriminant deterministic Uncertainty   
-[Paper]()   
-[Supplementary material]()
+[Paper](https://arxiv.org/abs/2207.10130)
 
 From Big to Small: Multi-Scale Local Planar Guidance for Monocular Depth Estimation   
-[arXiv](https://arxiv.org/abs/1907.10326)  
+[Paper](https://arxiv.org/abs/1907.10326)  
 [Supplementary material](https://arxiv.org/src/1907.10326v4/anc/bts_sm.pdf) 
 
 ## Note
