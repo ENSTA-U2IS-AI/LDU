@@ -6,9 +6,9 @@ import torch
     Calcualte the sparsification error for a given array according to a reference array.
 
     Args:
-        unc_npy: Flatten estimated uncertainty tensor. 
+        unc_tensor: Flatten estimated uncertainty tensor. 
         pred_tensor: Flatten depth prediction tensor. 
-        gt_npy: Flatten ground truth tensor. 
+        gt_tensor: Flatten ground truth tensor. 
         nb_bins: Number of bins using for uncertainty estimation. Each time, 1/nb_bins * 100% items with highest value will be removed.
         return_hist: if return histograms for drawing the sparsification curve, otherwise, directly return the sum of sparsification error.
     Returns:

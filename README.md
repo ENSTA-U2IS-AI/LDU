@@ -1,7 +1,6 @@
 # LDU: Latent Discriminant deterministic Uncertainty
-Latent Discriminant deterministic Uncertainty (ECCV 2022)   
-[Paper]()   
-[Supplementary material]()
+PyTorch implementation for Latent Discriminant deterministic Uncertainty (ECCV 2022).   
+[Paper](https://arxiv.org/abs/2207.10130)
 
 ## Abstract
 In this work we advance a scalable and effective Deterministic Uncertainty Methods (DUM) that relaxes the Lipschitz constraint typically hindering practicality of such architectures. We learn a discriminant latent space by leveraging a distinction maximization layer over an arbitrarily-sized set of trainable prototypes. 
@@ -18,7 +17,10 @@ For more details, please refer to our paper.
 We currently only provide the codes for toy example, classification and monocular depth estimation.\
 The semantic segmentation part will be released in near future.
 
-## Toy example
+
+## Experiment
+
+### Toy example
 We provide a toy example for illustrating LDU on two-moon dataset.
 <p>
 <a href="https://colab.research.google.com/drive/10On0ubqVEcOUvKTNCED1_qF9l5UG7OSc?usp=sharing" target="_parent">
@@ -26,17 +28,20 @@ We provide a toy example for illustrating LDU on two-moon dataset.
 </a>
 </p>
 
-## Monocular depth estimation example
+### Monocular depth estimation example
 In folder `monocular_depth_estimation/`, we provide the codes and instructions for LDU applying on monocular depth estimation task. The detailed information is shown on `monocular_depth_estimation/README.md`.
 
 ## TODO
 -   Add classification codes
 
 
-## Acknowledgements
+## Citation
 If you find this work useful for your research, please consider citing our paper:
 ```
-@article{
-
+@article{franchi2022latent,
+  title={Latent Discriminant deterministic Uncertainty},
+  author={Franchi, Gianni and Yu, Xuanlong and Bursuc, Andrei and Aldea, Emanuel and Dubuisson, Severine and Filliat, David},
+  journal={arXiv preprint arXiv:2207.10130},
+  year={2022}
 }
 ```
